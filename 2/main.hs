@@ -18,7 +18,7 @@ compute pr arg1 arg2 =
     (pr // [(1, arg1), (2, arg2)], 0)
 
 main = do
-  pr <- map read . splitOn "," <$> readFile "2.in"
+  pr <- map read . splitOn "," <$> readFile "in"
   let prM = listArray (0, length pr - 1) pr
   print $ compute prM 12 2
   print $ head
