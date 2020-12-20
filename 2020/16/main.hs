@@ -38,7 +38,6 @@ main = do
   print $ product $ map ((nums ticket !!) . fst) 
         $ filter (hasPrefix "departure" . snd) 
         $ map (fmap $ name . (fields !!)) $ M.assocs posField
-  --print $ sum $ filter (`M.notMember` validNumbers) $ nearbyNums
 
 hasPrefix :: String -> String -> Bool
 hasPrefix prefix str
