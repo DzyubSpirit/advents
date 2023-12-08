@@ -1,4 +1,6 @@
-with open('sample_data/vlad_1_example.txt') as f:
+import sys
+
+with open(sys.argv[1]) as f:
     lines = f.readlines()
 
 sum = 0
